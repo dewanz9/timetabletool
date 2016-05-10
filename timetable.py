@@ -124,7 +124,7 @@ def change_event(date, time, event_title, room_code, length, type):
         row[4] = type
         table[position] = row
     save_table(date, table)
-
+    print_day(date)
 
 def handle_command(list_of_inputs):
     """
@@ -141,6 +141,8 @@ def handle_command(list_of_inputs):
         length = input("how long is this event? ")
         type = input("what type of event is this? ")
         change_event(date, time, event_title, room_code, length, type)
+    elif list_of_inputs[0] == "clear":
+        print("\n"*40)
     else:
         print("command not recognized")
 
