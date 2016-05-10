@@ -1,7 +1,7 @@
 08:00,sleep,connors room,2,free
 09:00,sleep,connors room,2,free
 10:00,ownproject,connors room,2,study
-11:00,hangout,hallway,1,chill
+11:00,ownproject,connors room,2,study
 12:00,lunch,dining hall,1,eat
 13:00,phys101,connors room,2,studuy
 14:00,phys101,connors room,3,study
@@ -10,5 +10,5 @@
 17:00,free,connors room,1,free
 18:00,dinner,dining hall,1,eat
 19:00,phys101,connors room,1,study
-20:00,cono,hall,1,chill
+20:00,ownproject,connors room,2,study
 21:00,ownproject,connors room,2,study

@@ -1,14 +1,1 @@
-08:00,sleep,connors room,1,free
-09:00,phys101,C1,1,lecture
-10:00,ownproject,connors room,2,study
-11:00,ownproject,connors room,2,study
-12:00,lunch,dining hall,1,eat
-13:00,emath,C1,1,lecture
-14:00,emath,erskine 411,1,tutorial
-15:00,ownproject,connors room,1,study
-16:00,phys101,connors room,2,study
-17:00,phys101,connors room,2,study
-18:00,dinner,dining hall,1,eat
-19:00,phys101,connors room,1,study
-20:00,free,connors room,2,free
-21:00,free,connors room,2,free
+08:00,phys101,connors room,2,study09:00,phys101,C1,1,lecture10:00,ownproject,connors room,2,study11:00,ownproject,connors room,2,study12:00,lunch,dining hall,1,eat13:00,emath,C1,1,lecture14:00,emath,erskine 411,1,tutorial15:00,ownproject,connors room,1,study16:00,phys101,connors room,2,study17:00,phys101,connors room,2,study18:00,dinner,dining hall,1,eat19:00,phys101,connors room,1,study20:00,free,connors room,2,free21:00,free,connors room,2,free
