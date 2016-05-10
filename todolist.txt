@@ -1,3 +1,4 @@
 1.make a template system to fill a blank timetable from command line for a
 given date
-2.
+2.fix the error that occurs when view is given without a filename
+3.make a gui system to interact with the program
