@@ -10,6 +10,14 @@ def print_title():
     """
     prints the title sequence and instructions for the tool
     """
+    print("             ##################")
+    print("             #                #")
+    print("             #  =====  =====  #")
+    print("             #    |      |    #")
+    print("             #    |      |    #")
+    print("             #                #")
+    print("             ##################")
+    print("\n")
     print("#" * 10, end='')
     print("Welcome to timetable tool", end='')
     print("#" * 10)
