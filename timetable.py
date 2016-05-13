@@ -126,12 +126,38 @@ def change_event(date, time, event_title, room_code, length, type):
     save_table(date, table)
     print_day(date)
 
+def generate_template():
+    """
+    the generate template funcition. asks for a date and day and gens the
+    template from the temlate folder.
+    """
+    date = input("What day is the template for? dd/mm/yy: ")
+    day = input("What day of the week is this?: ")
+    if "/" not in date:
+        date_components = [date[0:2], date[2:4], date[4:]]
+    else:
+        date_components = date.split("/")
+    file_name = "{}{}{}.table".format(date_components[0], date_components[1], date_components[2])
+    try:
+        template_file = open("templates/{}_template.table".format(day), "r")
+    except IOError:
+        print("source template not found")
+    else:
+        source_lines = []
+        output_file = open(file_name, "w")
+        for line in template_file:
+            source_lines.append(line)
+            output_file.write(line)
+
 def handle_command(list_of_inputs):
     """
     handles the command that was inputed
     """
     if list_of_inputs[0] == "view":
-        print_day(list_of_inputs[1])
+        if len(list_of_inputs) == 1:
+            print("day is not valid.")
+        else:
+            print_day(list_of_inputs[1])
     elif list_of_inputs[0] == "change":
         date = list_of_inputs[1]
         print("changing date {}".format(date))
@@ -143,6 +169,11 @@ def handle_command(list_of_inputs):
         change_event(date, time, event_title, room_code, length, type)
     elif list_of_inputs[0] == "clear":
         print("\n"*40)
+    elif list_of_inputs[0] == "generate_template":
+        """
+        generates templates for given days takes input as: date, day
+        """
+        generate_template()
     else:
         print("command not recognized")
 
@@ -157,6 +188,7 @@ def run_terminal():
         list_of_inputs = command.split(" ")
         if list_of_inputs[0] == "exit":
             playing = False
+            break
         handle_command(list_of_inputs)
 
 
