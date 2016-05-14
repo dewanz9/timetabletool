@@ -1,2 +1,3 @@
-2.fix the error that occurs when view is given without a filename
-3.make a gui system to interact with the program
+1.make a gui system to interact with the program
+make the view function work with the date in slash format as well as bare
+format
