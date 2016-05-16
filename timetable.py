@@ -156,7 +156,7 @@ def generate_template():
         for line in template_file:
             source_lines.append(line)
             output_file.write(line)
-
+        print("template generated successfully for: {} on date: {}".format(day, date))
 def handle_command(list_of_inputs):
     """
     handles the command that was inputed
