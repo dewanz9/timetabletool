@@ -6,6 +6,7 @@ author: Connor Dewar
 date: 09/05/2016
 """
 
+
 def print_title():
     """
     prints the title sequence and instructions for the tool
@@ -21,6 +22,7 @@ def print_title():
     print("#" * 10, end='')
     print("Welcome to timetable tool", end='')
     print("#" * 10)
+
 
 def create_table(file_to_use):
     """
@@ -60,6 +62,7 @@ def print_title_border_horiz(max_name, max_roomcode, max_type):
     print("-" * 1, end='')
     print("+")
 
+
 def print_data_line(line, max_name, max_roomcode, max_type):
     """
     prints a single data line
@@ -79,12 +82,13 @@ def print_data_line(line, max_name, max_roomcode, max_type):
     print(line[3], end='')
     print("|")
 
+
 def print_day(day):
     """
     prints a given day
     """
     timetable = load_table(day)
-    if timetable == False:
+    if timetable is False:
         print("file not found")
     else:
         max_name = 0
@@ -102,6 +106,7 @@ def print_day(day):
             print_data_line(line, max_name, max_roomcode, max_type)
         print_title_border_horiz(max_name, max_roomcode, max_type)
 
+
 def save_table(date, table):
     """
     saves a given table
@@ -116,12 +121,13 @@ def save_table(date, table):
         file_using.write("{},{},{},{},{}\n".format(line[0], line[1], line[2], line[3], line[4]))
     file_using.close()
 
+
 def change_event(date, time, event_title, room_code, length, type):
     """
     changes a given event at a given time on a given day
     """
     table = load_table(date)
-    if table == False:
+    if table is False:
         print("file not found")
     else:
         position = int(time[:2])-8
@@ -133,6 +139,7 @@ def change_event(date, time, event_title, room_code, length, type):
         table[position] = row
     save_table(date, table)
     print_day(date)
+
 
 def generate_template():
     """
@@ -157,6 +164,8 @@ def generate_template():
             source_lines.append(line)
             output_file.write(line)
         print("template generated successfully for: {} on date: {}".format(day, date))
+
+
 def handle_command(list_of_inputs):
     """
     handles the command that was inputed
@@ -184,6 +193,7 @@ def handle_command(list_of_inputs):
         generate_template()
     else:
         print("command not recognized")
+
 
 def run_terminal():
     """
